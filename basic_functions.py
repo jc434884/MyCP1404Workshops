@@ -17,9 +17,14 @@ def main():
 
 
 def get_limits():
+  while True:
     minimum = int(input("Enter the minimum: "))
     maximum = int(input("Enter the maximum: "))
-    return minimum, maximum
+    if maximum < minimum:
+        print("Invalid value")
+    else:
+     break
+  return minimum, maximum
 
 
 def print_between(start, end):
